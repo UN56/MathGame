@@ -1,5 +1,5 @@
 #--------------------------------
-# Github : https://github.com/UN56/PythonMathGame
+# Github : https://github.com/UN56/MathGame
 #--------------------------------
 text = "MATH GAME!"
 import os
