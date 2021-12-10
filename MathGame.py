@@ -56,13 +56,13 @@ while True:
     start = time.time()
     if j == "+":
         v = n + m
-        jawaban = input(str(n) + " + " + str(m) + " = ")
+        answer = input(f"{n} + {m} = ")
         # start = time.time()
-        if jawaban == "q":
+        if answer == "q":
             quit()
             break
-        if representsInt(jawaban):
-            if int(jawaban) == v:
+        if representsInt(answer):
+            if int(answer) == v:
                 end = time.time()
                 tm = end - start
                 print(f"{Fore.GREEN}Correct! [" + "%.2f" % tm + "]")
@@ -73,9 +73,9 @@ while True:
             wrong()
     # elif j == "/":
     #     v = n / m
-    #     jawaban = int(input(str(n) + " ÷ " + str(m) + " = "))
+    #     answer = input(f"{n} + {m} = ")
     #     # start = time.time()
-    #     if jawaban == v:
+    #     if answer == v:
     #         end = time.time()
     #         tm = end - start
     #         print(f"{Fore.GREEN}Correct! [" + str(tm) + "]")
@@ -83,13 +83,13 @@ while True:
     #         print(f"{Fore.RED}Wrong!")
     elif j == "x":
         v = n * m
-        jawaban = input(str(n) + " x " + str(m) + " = ")
+        answer = input(f"{n} + {m} = ")
         # start = time.time()
-        if jawaban == "q":
+        if answer == "q":
             quit()
             break
-        if representsInt(jawaban):
-            if int(jawaban) == v:
+        if representsInt(answer):
+            if int(answer) == v:
                 end = time.time()
                 tm = end - start
                 # "%.2f" % 12.34567
@@ -100,7 +100,7 @@ while True:
         else:
             wrong()
     else:
-        print(f"{Fore.MAGENTA}ape nii?: " + j)
+        print(f"{Fore.MAGENTA}what's that?: " + j)
         print(f"{Fore.RED}\nPROGRAM WILL CLOSED AFTER 2 SECOND")
         time.sleep(2)
         break
