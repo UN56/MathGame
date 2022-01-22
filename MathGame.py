@@ -83,7 +83,7 @@ while True:
     #         print(f"{Fore.RED}Wrong!")
     elif j == "x":
         v = n * m
-        answer = input(f"{n} + {m} = ")
+        answer = input(f"{n} x {m} = ")
         # start = time.time()
         if answer == "q":
             quit()
