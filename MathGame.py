@@ -2,12 +2,11 @@
 # Github : https://github.com/UN56/MathGame
 #--------------------------------
 text = "MATH GAME!"
-import os
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 import time
 import colorama
-from colorama import Fore, Style
+from colorama import Fore
 from random import randrange
 
 def wrong():
@@ -15,7 +14,7 @@ def wrong():
     time.sleep(0.3)
 
 def quit():
-    print(f"{Fore.RED}\nPROGRAM WILL CLOSED AFTER 1 SECOND")
+    print(f"{Fore.RED}\nPROGRAM WILL CLOSE AFTER 1 SECOND")
     time.sleep(1)
 
 def representsInt(s):
@@ -101,6 +100,6 @@ while True:
             wrong()
     else:
         print(f"{Fore.MAGENTA}what's that?: " + j)
-        print(f"{Fore.RED}\nPROGRAM WILL CLOSED AFTER 2 SECOND")
+        print(f"{Fore.RED}\nPROGRAM WILL CLOSE AFTER 2 SECOND")
         time.sleep(2)
         break
