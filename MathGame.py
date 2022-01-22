@@ -14,7 +14,7 @@ def wrong():
     time.sleep(0.3)
 
 def quit():
-    print(f"{Fore.RED}\nPROGRAM WILL CLOSE AFTER 1 SECOND")
+    print(f"{Fore.MAGENTA}\nPROGRAM WILL CLOSE AFTER 1 SECOND")
     time.sleep(1)
 
 def representsInt(s):
@@ -47,7 +47,7 @@ print("\n".join(strings))
 print("\n")
 print(f"{Fore.YELLOW}INPUT 'q' FOR QUIT THE GAME!!")
 print("\n\n\n")
-j = input("multiplication: [x], addition: [+]: ")
+j = input("multiplication: [x], addition: [+], subtraction: [-]: ")
 
 while True:
     n = randrange(1, 10)
@@ -70,9 +70,11 @@ while True:
                 wrong()
         else:
             wrong()
-    # elif j == "/":
-    #     v = n / m
-    #     answer = input(f"{n} + {m} = ")
+    # elif j == "-":
+    #     numlist = [n,m]
+    #     numlist.sort(reverse=True)
+    #     v = n - m
+    #     answer = input(f"{n} - {m} = ")
     #     # start = time.time()
     #     if answer == v:
     #         end = time.time()
@@ -80,6 +82,26 @@ while True:
     #         print(f"{Fore.GREEN}Correct! [" + str(tm) + "]")
     #     else:
     #         print(f"{Fore.RED}Wrong!")
+    elif j == "-":
+        numlist = [n,m]
+        numlist.sort(reverse=True)
+        v = numlist[0] - numlist[1]
+        answer = input(f"{numlist[0]} - {numlist[1]} = ")
+        # start = time.time()
+        if answer == "q":
+            quit()
+            break
+        if representsInt(answer):
+            if int(answer) == v:
+                end = time.time()
+                tm = end - start
+                # "%.2f" % 12.34567
+                print(f"{Fore.GREEN}Correct! [" + "%.2f" % tm + " sec]")
+                time.sleep(0.3)
+            else:
+                wrong()
+        else:
+            wrong()
     elif j == "x":
         v = n * m
         answer = input(f"{n} x {m} = ")
@@ -99,7 +121,7 @@ while True:
         else:
             wrong()
     else:
-        print(f"{Fore.MAGENTA}what's that?: " + j)
-        print(f"{Fore.RED}\nPROGRAM WILL CLOSE AFTER 2 SECOND")
+        print(f"{Fore.RED}ERROR!: " + j)
+        print(f"{Fore.MAGENTA}\nPROGRAM WILL CLOSE AFTER 2 SECOND")
         time.sleep(2)
         break
