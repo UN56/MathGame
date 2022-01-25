@@ -9,6 +9,10 @@ import colorama
 from colorama import Fore
 from random import randrange
 
+def correct():
+    print(f"{Fore.GREEN}Correct! [" + "%.2f" % tm + "]")
+    time.sleep(0.3)
+
 def wrong():
     print(f"{Fore.RED}Wrong!")
     time.sleep(0.3)
@@ -24,14 +28,11 @@ def representsInt(s):
     except ValueError:
         return False
 
-
 colorama.init(autoreset=True)
 
 print('\033[31m')
 print('\033[39m')  # and reset to default color
 print()
-
-# p = ["+", "-", "*"]
 
 # ---------------Source: https://stackoverflow.com/questions/9632995/how-to-easily-print-ascii-art-text
 myfont = ImageFont.truetype("verdanab.ttf", 12)
@@ -64,8 +65,7 @@ while True:
             if int(answer) == v:
                 end = time.time()
                 tm = end - start
-                print(f"{Fore.GREEN}Correct! [" + "%.2f" % tm + "]")
-                time.sleep(0.3)
+                correct()
             else:
                 wrong()
         else:
@@ -95,9 +95,7 @@ while True:
             if int(answer) == v:
                 end = time.time()
                 tm = end - start
-                # "%.2f" % 12.34567
-                print(f"{Fore.GREEN}Correct! [" + "%.2f" % tm + " sec]")
-                time.sleep(0.3)
+                correct()
             else:
                 wrong()
         else:
@@ -113,9 +111,7 @@ while True:
             if int(answer) == v:
                 end = time.time()
                 tm = end - start
-                # "%.2f" % 12.34567
-                print(f"{Fore.GREEN}Correct! [" + "%.2f" % tm + " sec]")
-                time.sleep(0.3)
+                correct()
             else:
                 wrong()
         else:
