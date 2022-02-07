@@ -46,7 +46,7 @@ while True:
     n = randrange(1, 10)
     m = randrange(1, 10)
     start = time.time()
-    if j == "+":
+    if j == "+" or j == "addition":
         v = n + m
         answer = input(f"{n} + {m} = ")
         # start = time.time()
@@ -62,19 +62,8 @@ while True:
                 wrong()
         else:
             wrong()
-    # elif j == "-":
-    #     numlist = [n,m]
-    #     numlist.sort(reverse=True)
-    #     v = n - m
-    #     answer = input(f"{n} - {m} = ")
-    #     # start = time.time()
-    #     if answer == v:
-    #         end = time.time()
-    #         tm = end - start
-    #         print(f"{Fore.GREEN}Correct! [" + str(tm) + "]")
-    #     else:
-    #         print(f"{Fore.RED}Wrong!")
-    elif j == "-":
+
+    elif j == "-" or j == "subtraction":
         numlist = [n,m]
         numlist.sort(reverse=True)
         v = numlist[0] - numlist[1]
@@ -92,7 +81,7 @@ while True:
                 wrong()
         else:
             wrong()
-    elif j == "x":
+    elif j == "x" or j == "multiplication":
         v = n * m
         answer = input(f"{n} x {m} = ")
         # start = time.time()
