@@ -2,12 +2,11 @@
 # Github : https://github.com/UN56/MathGame
 #--------------------------------
 text = "MATH GAME!"
-from PIL import Image, ImageDraw, ImageFont
-import numpy as np
 import time
 import colorama
 from colorama import Fore
 from random import randrange
+import pyfiglet
 
 def correct():
     print(f"{Fore.GREEN}Correct! [" + "%.2f" % tm + "]")
@@ -34,17 +33,10 @@ print('\033[31m')
 print('\033[39m')  # and reset to default color
 print()
 
-# ---------------Source: https://stackoverflow.com/questions/9632995/how-to-easily-print-ascii-art-text
-myfont = ImageFont.truetype("verdanab.ttf", 12)
-size = myfont.getsize(text)
-img = Image.new("1", size, "black")
-draw = ImageDraw.Draw(img)
-draw.text((0, 0), text, "white", font=myfont)
-pixels = np.array(img, dtype=np.uint8)
-chars = np.array([' ', '#'], dtype="U1")[pixels]
-strings = chars.view('U' + str(chars.shape[1])).flatten()
-print("\n".join(strings))
-# -------------------------------------------------------------------------
+# ---------------Create Banner
+bannerText = pyfiglet.figlet_format("Math Game", font = "banner3-D" )
+print(bannerText)
+# ----------------------------
 print("\n")
 print(f"{Fore.YELLOW}INPUT 'q' FOR QUIT THE GAME!!")
 print("\n\n\n")
